@@ -41,12 +41,12 @@ const regularUser = {
     }
 
 }
-// console.log(regularUser);
-// console.log(regularUser.fullname.userfullname.firstname);
+console.log(regularUser);
+console.log(regularUser.fullname.userfullname.firstname);
 
 // Destructuring
-const {fullname : name} = regularUser
-console.log(name);
+// const {fullname : name} = regularUser
+// console.log(name);
 
 // JSON
 // {
