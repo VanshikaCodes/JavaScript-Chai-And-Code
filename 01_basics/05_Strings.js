@@ -1,9 +1,9 @@
 let name = "Vanshika"                      //TypeOf name will be string
 let value = 50
 
-// console.log(name.length);                   //Not recommened
+// console.log(name.length);                   
 
-console.log(name + " is and repo is " + value);
+console.log(name + " is and repo is " + value);         //Not recommened
 
 console.log(`Hello, my name is ${name} and my repo value is ${value}`)
 
