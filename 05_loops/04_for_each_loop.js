@@ -1,3 +1,5 @@
+// For each don't return any value
+
 // const coding = ["JS", "RUBY", "CSS", "HTML", "DB"]
 
 // coding.forEach(function (items) {
