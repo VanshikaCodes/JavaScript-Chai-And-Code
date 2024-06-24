@@ -15,12 +15,12 @@ tinderUser.isLoggedIn = false
 
 
 const obj1 = {
-    1:'a', 
+    1 : 'a', 
     2 : 'b'
 }
 
 const obj2 = {
-    3:'a', 
+    3 : 'a', 
     4 : 'b'
 }
 
