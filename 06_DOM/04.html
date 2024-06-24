@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    // Ye ek optimised tareeka nhi hai kyonki isme hm innerHTML function me poore document tree ko baar baar traverse krte hai
+    // function addLang(langName) {
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLang("Python")
+
+    function addOptiLang(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("Python")
+    addOptiLang("CSS")
+
+    // Editing The Element
+        const secondLang = document.querySelector("li:nth-child(2)")
+        // console.log(secondLang);
+        // secondLang.innerHTML = "Yohooo"
+        const newText = document.createElement('li')
+        newText.textContent = "Mojooooo"
+        secondLang.replaceWith(newText)
+    // Editing 
+        const firstLang = document.querySelector('li')
+        // firstLang.innerHTML = "TypeScript"
+        firstLang.outerHTML = "<li>TypeScript</li>"
+        // const newLi = document.createElement('li')
+        // newLi.textContent = "TypeSCRIPT"
+        // firstLang.replaceWith(newLi)
+
+    // Removing ELement
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+
+</html>
