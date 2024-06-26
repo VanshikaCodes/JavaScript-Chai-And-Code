@@ -20,9 +20,9 @@
 </body>
 <script>
 
-    document.getElementById('owl').onclick = () => {
-        alert("Owl Clicked")
-    }
+    // document.getElementById('owl').onclick = () => {
+    //     alert("Owl Clicked")
+    // }
 
      // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
@@ -31,10 +31,18 @@
 
     document.getElementById('owl').addEventListener('click', function (e) {
         alert("Owl Clicked")
+        e.stopPropagation()                  // Isse propagation nhi hoga i.e., inner element aur outer element alag ho jayenge 
     }, false)
-    // Event bubbling
-    // eventPropagation
+    document.getElementById('images').addEventListener('click', function (e) {
+        alert("Ul Clicked")
+    }, false)
+    // Event bubbling(False value of addEventListener) --  isme choteee element se baddeee element ki taraf move krte hai. It is DEFAULT VALUE 
+    // eventPropagation(True value of addEventListener) --  isme bade element se chote element ki taraf move krte hai
 
+    document.getElementById('google').addEventListener('click', function (e) {
+        console.log("Google Clicked")
+        e.preventDefault()             // Prevents default behaviour i.e., to go onto the google website in this case
+    }, false)
 
 
 </script>
