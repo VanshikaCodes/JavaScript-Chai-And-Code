@@ -48,7 +48,7 @@ buttons.forEach(function (button) {
 });
 ```
 
-#Project 2
+# Project 2
 ``` JavaScript
 const form = document.querySelector('form')
 // this usecase will give you empty value
@@ -83,7 +83,7 @@ form.addEventListener('submit', (e) => {
 ```
 
 
-#Project 4
+# Project 3
 
 ```JavaScript
 const clock = document.getElementById('clock');
@@ -97,7 +97,7 @@ setInterval(function () {
 
 ```
 
-#Project 4 
+# roject 4 
 
 ```JavaScript
 const form = document.querySelector('form')
@@ -225,6 +225,32 @@ function newGame() {
   });
 }
 
+```
 
+# Project 6
+
+```JavaScript
+
+const randomColor = function() {
+  return Math.floor(Math.random() * 255)
+}
+
+let start
+const changeBackground = function() {
+  const color = `rgb(${randomColor()} ${randomColor()} ${randomColor()})`
+  document.body.style.backgroundColor = color
+}
+
+const startChangeColor = function () {
+  start = setInterval(changeBackground, 2000)
+}
+
+const stopChangeColor = function () {
+  clearInterval(start)
+}
+
+document.querySelector("#start").addEventListener('click', startChangeColor)
+
+document.querySelector("#stop").addEventListener('click', stopChangeColor)
 
 ```
