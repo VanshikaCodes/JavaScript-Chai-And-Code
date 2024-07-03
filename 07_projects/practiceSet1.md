@@ -235,18 +235,21 @@ const randomColor = function() {
   return Math.floor(Math.random() * 255)
 }
 
-let start
+let intervalId
 const changeBackground = function() {
   const color = `rgb(${randomColor()} ${randomColor()} ${randomColor()})`
   document.body.style.backgroundColor = color
 }
 
 const startChangeColor = function () {
-  start = setInterval(changeBackground, 2000)
+  if (!intervalId){
+  intervalId = setInterval(changeBackground, 2000)
+  }
 }
 
 const stopChangeColor = function () {
-  clearInterval(start)
+  clearInterval(intervalId)
+  intervalId = null
 }
 
 document.querySelector("#start").addEventListener('click', startChangeColor)
